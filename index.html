@@ -66,26 +66,26 @@
             //     });
             // }, 1000);
 
-            var time = 500;
-            setInterval(function() {
-                $(".letter").each(function(i, obj) {
-                    setTimeout(function() {
-                        $(obj).toggleClass("animate");
-                    }, time);
-                    time += 400;
-                });
-                $($(".letter").get().reverse()).each(function(i, obj) {
-                    setTimeout(function() {
-                        $(obj).toggleClass("animate");
-                    }, time);
-                    time += 400;
-                });
-            }, 1000);
-
+            // var time = 500;
             // setInterval(function() {
-            //     $index = randomIntFromInterval(0, 9);
-            //     $(".letter").eq($index).toggleClass("animate");
-            // }, 900);
+            //     $(".letter").each(function(i, obj) {
+            //         setTimeout(function() {
+            //             $(obj).toggleClass("animate");
+            //         }, time);
+            //         time += 400;
+            //     });
+            //     $($(".letter").get().reverse()).each(function(i, obj) {
+            //         setTimeout(function() {
+            //             $(obj).toggleClass("animate");
+            //         }, time);
+            //         time += 400;
+            //     });
+            // }, 100);
+
+            setInterval(function() {
+                $index = randomIntFromInterval(0, 9);
+                $(".letter").eq($index).toggleClass("animate");
+            }, 200);
 
             // setInterval(function() {
             //     $(".letter").toggleClass("animate");

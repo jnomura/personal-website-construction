@@ -1,0 +1,118 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+.font-load {
+  font-family: 'Lato', sans-serif;
+  position: absolute;
+}
+body {
+  font-family: 'Lato', sans-serif;
+	/*background-color: #17788b;*/
+}
+.container {
+	padding-top: 75px;
+}
+.browser-warning {
+	text-align: center;
+	margin-top: 25px;
+}
+
+/********** Grid **********/
+.name-grid {
+	list-style: none;
+	padding: 0;
+}
+.name-grid li {
+	font-size: 5em;
+	line-height: 1.5;
+	max-height: 290px;
+	text-align: center;
+}
+.name-grid li span {
+	display: inline-block;
+	font-weight: 900;
+	line-height: 1;
+	position: relative;
+	/*color: rgba(151, 189, 197, 0.7);*/
+	color: rgb(23, 120, 139); /* fallback color */
+	color: rgba(23, 120, 139, 0.5);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	z-index: 1;
+}
+.name-grid li span:before,
+.name-grid li span:after {
+	position: absolute;
+	content: attr(data-letter);
+	line-height: inherit;
+	top: 0;
+	left: 0;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.name-grid li span:before {
+	color: #eee; /* fallback color */
+	color: hsla(0, 0%, 0%, 0.12);
+  z-index: 2;
+  text-shadow: none;
+}
+.name-grid li span:after {
+  z-index: 3;
+}
+
+/********** Letter Colors **********/
+.letter span {
+	text-shadow: 1px 4px 6px #fff, 0 0 0 hsla(0, 0%, 0%, 0.3), 1px 4px 6px #fff;
+	/*text-shadow: 1px 4px 6px #17788b, 0 0 0 hsla(0, 0%, 0%, 0.3), 1px 4px 6px #17788b;*/
+}
+.letter span:after {
+	color: #f8fbfb;
+	opacity: 0.92;
+	/*color: #238ca0;
+	opacity: 0.92;*/
+	text-shadow: 1px 1px rgba(9, 89, 105, 0.4);
+}
+.letter:hover span:after {
+	color: #f8fbfb;
+	/*color: #238ca0;*/
+}
+
+/********** Letter Transforms **********/
+.letter span:before,
+.letter span:after {
+	-webkit-transform-origin: 0 50%;
+	-moz-transform-origin: 0 50%;
+	-ms-transform-origin: 0 50%;
+	-o-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+}
+.letter:hover span:before {
+	-webkit-transform: scale(0.85,1) skew(0deg,20deg);
+	-moz-transform: scale(0.85,1) skew(0deg,20deg);
+	-ms-transform: scale(0.85,1) skew(0deg,20deg);
+	-o-transform: scale(0.85,1) skew(0deg,20deg);
+	transform: scale(0.85,1) skew(0deg,20deg);
+}
+.letter:hover span:after {
+	-webkit-transform: rotateY(-40deg);
+	-moz-transform: rotateY(-40deg);
+	-ms-transform: rotateY(-40deg);
+	-o-transform: rotateY(-40deg);
+	transform: rotateY(-40deg);
+}
+
+.apology-text {
+	font-size: 35px;
+	text-align: center;
+	margin-top: 100px;
+}
+.blur {
+   color: transparent;
+   text-shadow: 0 0 7px rgba(23, 120, 139, 0.5);
+}
+
+.email {
+	text-align: center;
+	margin-top: 100px;
+}

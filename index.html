@@ -26,20 +26,20 @@
         <div class="container">
             <div class="first-name-div">
                 <ul class="name-grid row">
-                    <li class="letter animate col-xs-12 col-sm-1 col-sm-offset-4"><span data-letter="J">J</span></li>
-                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
-                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="N">N</span></li>
-                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="E">E</span></li>
+                    <li class="letter col-xs-12 col-sm-1 col-sm-offset-4"><span data-letter="J">J</span></li>
+                    <li class="letter col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
+                    <li class="letter col-xs-12 col-sm-1"><span data-letter="N">N</span></li>
+                    <li class="letter col-xs-12 col-sm-1"><span data-letter="E">E</span></li>
                 </ul>
             </div>
             <div class="last-name-div">
                 <ul class="name-grid row">
-                    <li class="letter animate col-xs-12 col-sm-1 col-sm-offset-3"><span data-letter="N">N</span></li>
-                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="O">O</span></li>
-                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="M">M</span></li>
-                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="U">U</span></li>
-                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="R">R</span></li>
-                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
+                    <li class="letter col-xs-12 col-sm-1 col-sm-offset-3"><span data-letter="N">N</span></li>
+                    <li class="letter col-xs-12 col-sm-1"><span data-letter="O">O</span></li>
+                    <li class="letter col-xs-12 col-sm-1"><span data-letter="M">M</span></li>
+                    <li class="letter col-xs-12 col-sm-1"><span data-letter="U">U</span></li>
+                    <li class="letter col-xs-12 col-sm-1"><span data-letter="R">R</span></li>
+                    <li class="letter col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
                 </ul>
             </div>
             <div class="row">
@@ -53,16 +53,43 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Bootstrap JS -->
         <script src="js/bootstrap.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/custom.js"></script>
         <script>
-            var time = 500;
+            // var time = 500;
+            // setInterval(function() {
+            //     $(".letter").each(function(i, obj) {
+            //         setTimeout(function() {
+            //             $(obj).toggleClass("animate");
+            //         }, time);
+            //         time += 200;
+            //     });
+            // }, 1000);
+
+            // var time = 500;
+            // setInterval(function() {
+            //     $(".letter").each(function(i, obj) {
+            //         setTimeout(function() {
+            //             $(obj).toggleClass("animate");
+            //         }, time);
+            //         time += 400;
+            //     });
+            //     $($(".letter").get().reverse()).each(function(i, obj) {
+            //         setTimeout(function() {
+            //             $(obj).toggleClass("animate");
+            //         }, time);
+            //         time += 400;
+            //     });
+            // }, 100);
+
             setInterval(function() {
-                $(".letter").each(function(i, obj) {
-                    setTimeout(function() {
-                        $(obj).toggleClass("animate");
-                    }, time);
-                    time += 200;
-                });
-            }, 1000);
+                $index = randomIntFromInterval(0, 9);
+                $(".letter").eq($index).toggleClass("animate");
+            }, 200);
+
+            // setInterval(function() {
+            //     $(".letter").toggleClass("animate");
+            // }, 900);
         </script>
     </body>
 </html>

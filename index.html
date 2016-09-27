@@ -26,33 +26,43 @@
         <div class="container">
             <div class="first-name-div">
                 <ul class="name-grid row">
-                    <li class="letter col-xs-12 col-sm-1 col-sm-offset-4"><span data-letter="J">J</span></li>
-                    <li class="letter col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
-                    <li class="letter col-xs-12 col-sm-1"><span data-letter="N">N</span></li>
-                    <li class="letter col-xs-12 col-sm-1"><span data-letter="E">E</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1 col-sm-offset-4"><span data-letter="J">J</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="N">N</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="E">E</span></li>
                 </ul>
             </div>
             <div class="last-name-div">
                 <ul class="name-grid row">
-                    <li class="letter col-xs-12 col-sm-1 col-sm-offset-3"><span data-letter="N">N</span></li>
-                    <li class="letter col-xs-12 col-sm-1"><span data-letter="O">O</span></li>
-                    <li class="letter col-xs-12 col-sm-1"><span data-letter="M">M</span></li>
-                    <li class="letter col-xs-12 col-sm-1"><span data-letter="U">U</span></li>
-                    <li class="letter col-xs-12 col-sm-1"><span data-letter="R">R</span></li>
-                    <li class="letter col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1 col-sm-offset-3"><span data-letter="N">N</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="O">O</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="M">M</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="U">U</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="R">R</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
                 </ul>
             </div>
             <div class="row">
                 <h2 class="apology-text blur col-xs-12">Terribly sorry, my site is currently under construction.</h2>
             </div>
             <div class="row">
-                <p class="email col-xs-12"><a href="#">nomurajane@gmail.com</a></p>
+                <p class="email col-xs-12"><a href="mailto:nomurajane@gmail.com" target="_top" class="blur">nomurajane@gmail.com</a></p>
             </div>
         </div>
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Bootstrap JS -->
         <script src="js/bootstrap.min.js"></script>
-        <!-- TODO: Add animation to box letters or to the blurry apology text -->
+        <script>
+            var time = 500;
+            setInterval(function() {
+                $(".letter").each(function(i, obj) {
+                    setTimeout(function() {
+                        $(obj).toggleClass("animate");
+                    }, time);
+                    time += 200;
+                });
+            }, 1000);
+        </script>
     </body>
 </html>

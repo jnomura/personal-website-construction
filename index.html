@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jane Nomura</title>
+        <!-- Bootstrap CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <!--[if gte IE 9 | !IE ]><!-->
+            <link rel="stylesheet" href="css/custom.css">
+        <!--<![endif]-->
+        <!--[if lt IE 9 | IE 9]>
+            <link rel="stylesheet" href="css/custom-ie.css">
+        <![endif]-->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 9 | IE 9]>
+            <p class="browser-warning">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="font-load">&nbsp;</div>
+        <div class="container">
+            <div>
+                <ul class="name-grid row">
+                    <li class="letter animate col-xs-12 col-sm-1 col-sm-offset-4"><span data-letter="J">J</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="N">N</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="E">E</span></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="name-grid row">
+                    <li class="letter animate col-xs-12 col-sm-1 col-sm-offset-3"><span data-letter="N">N</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="O">O</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="M">M</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="U">U</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="R">R</span></li>
+                    <li class="letter animate col-xs-12 col-sm-1"><span data-letter="A">A</span></li>
+                </ul>
+            </div>
+            <div class="row">
+                <h2 class="apology-text blur col-xs-12">Terribly sorry. My site is currently under construction.</h2>
+            </div>
+            <div class="row">
+                <p class="email col-xs-12"><a href="mailto:nomurajane@gmail.com" target="_top" class="blur">nomurajane@gmail.com</a></p>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/custom.js"></script>
+        <!--[if gte IE 9 | !IE ]><!-->
+            <script>
+                $(document).ready(function() {
+                    animateLetters();
+                });
+                var animateTime = 500;
+                setInterval(function() {
+                    animateLetters();
+                }, 10000);
+                $(".letter").hover(function() {
+                    $(this).toggleClass("animate");
+                });
+                function animateLetters() {
+                    $(".letter").each(function(i, obj) {
+                        toggleAnimateClass(obj);
+                    });
+                    $($(".letter").get().reverse()).each(function(i, obj) {
+                        toggleAnimateClass(obj);
+                    });
+                }
+                function toggleAnimateClass(element) {
+                    setTimeout(function() {
+                        $(element).toggleClass("animate");
+                    }, animateTime);
+                    animateTime += 100;
+                }
+            </script>
+        <!--<![endif]-->
+    </body>
+</html>

@@ -1,0 +1,86 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+
+.font-load {
+  font-family: 'Lato', sans-serif;
+  position: absolute;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+.container {
+	padding-top: 75px;
+}
+.browser-warning {
+	text-align: center;
+	margin-top: 25px;
+}
+.name-grid {
+	list-style: none;
+	padding: 0;
+}
+.letter {
+	font-size: 5em;
+	line-height: 1.5;
+	max-height: 290px;
+	text-align: center;
+}
+.letter span {
+	display: inline-block;
+	font-weight: 900;
+	line-height: 1;
+	position: relative;
+	color: rgb(23, 120, 139);
+	z-index: 1;
+	text-shadow: 1px 4px 6px #fff, 0 0 0 #eee, 1px 4px 6px #fff;
+}
+.letter span:before,
+.letter span:after {
+	position: absolute;
+	content: attr(data-letter);
+	line-height: inherit;
+	top: 0;
+	left: 0;
+}
+.letter span:before {
+	color: #72adb9;
+  z-index: 2;
+  text-shadow: none;
+}
+.letter span:after {
+	color: #f8fbfb;
+	opacity: 0.92;
+	z-index: 3;
+	text-shadow: 1px 1px #66a6b3;
+}
+.apology-text {
+	font-size: 35px;
+	text-align: center;
+	margin-top: 100px;
+}
+.blur {
+   color: transparent;
+   text-shadow: 0 0 7px #66a6b3;
+}
+.blur:hover {
+	color: rgb(23, 120, 139);
+	text-shadow: none;
+}
+.email {
+	text-align: center;
+	margin-top: 100px;
+	font-size: 20px;
+}
+
+@media(max-width: 1200px) {
+	.letter {
+		font-size: 3em;
+	}
+	.apology-text {
+		font-size: 25px;
+	}
+}
+@media(max-width: 768px) {
+	.container {
+		padding-top: 15px;
+	}
+}

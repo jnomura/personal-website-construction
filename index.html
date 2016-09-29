@@ -66,7 +66,9 @@
         <!--[if gt IE 9]><!-->
             <script>
                 $(document).ready(function() {
+                    var animateTime = 500;
                     animateLetters();
+
                     var isMobile = false; // Initiate as false
                     // Device detection
                     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -79,29 +81,32 @@
                         }, {
                             offset: '100%'
                         });
+                    } else {
+                        $(".letter").hover(function() {
+                            $(this).toggleClass("animate");
+                        });
                     }
+
+                    setInterval(function() {
+                        animateLetters();
+                    }, 5000);
+
+                    function animateLetters() {
+                        $(".letter").each(function(i, obj) {
+                            toggleAnimateClass(obj);
+                        });
+                        $($(".letter").get().reverse()).each(function(i, obj) {
+                            toggleAnimateClass(obj);
+                        });
+                    }
+                    function toggleAnimateClass(element) {
+                        setTimeout(function() {
+                            $(element).toggleClass("animate");
+                        }, animateTime);
+                        animateTime += 100;
+                    }
+
                 });
-                var animateTime = 500;
-                setInterval(function() {
-                    animateLetters();
-                }, 10000);
-                $(".letter").hover(function() {
-                    $(this).toggleClass("animate");
-                });
-                function animateLetters() {
-                    $(".letter").each(function(i, obj) {
-                        toggleAnimateClass(obj);
-                    });
-                    $($(".letter").get().reverse()).each(function(i, obj) {
-                        toggleAnimateClass(obj);
-                    });
-                }
-                function toggleAnimateClass(element) {
-                    setTimeout(function() {
-                        $(element).toggleClass("animate");
-                    }, animateTime);
-                    animateTime += 100;
-                }
             </script>
         <!--<![endif]-->
     </body>

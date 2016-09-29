@@ -13,6 +13,7 @@ body {
 .browser-warning {
 	text-align: center;
 	margin-top: 25px;
+	font-size: 20px;
 }
 .name-grid {
 	list-style: none;
